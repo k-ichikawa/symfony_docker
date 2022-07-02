@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ユーザー登録</title>
+    </head>
+    <body>
+    {{ form_start(form) }}
+        <p>
+            first name
+            {{ form_widget(form.firstName) }}
+        </p>
+        <p>
+            last name
+            {{ form_widget(form.lastName) }}
+        </p>
+        <p>
+            first name kana
+            {{ form_widget(form.firstNameKana) }}
+        </p>
+        <p>
+            last name kana
+            {{ form_errors(form.lastNameKana) }}
+            {{ form_widget(form.lastNameKana) }}
+        </p>
+        <p>
+            email
+            {{ form_errors(form.email) }}
+            {{ form_widget(form.email) }}
+        </p>
+        <p>
+            password
+            {{ form_errors(form.password) }}
+            {{ form_widget(form.password) }}
+        </p>        
+        <p>
+            {{ form_widget(form.send) }}
+        </p>
+    {{ form_end(form) }}
+    </body>
+</html>
